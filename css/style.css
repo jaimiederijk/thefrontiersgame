@@ -1,0 +1,77 @@
+/*movingbackground 
+source: http://jsfiddle.net/5pVr4/7/	
+http://stackoverflow.com/questions/21087518/animate-css-background-position-with-smooth-results-sub-pixel-animation*/
+@-webkit-keyframes MOVE-BG {
+	from {
+		-webkit-transform: translateX(0);
+	}
+	to { 
+		-webkit-transform: translateX(-550px);
+	}
+}
+body {
+    width: 1600px;
+    margin: 0 auto;
+    
+}
+#pause {
+    position: relative;
+    left: -800px;
+    top: -20px;
+    margin: 0 auto;
+    
+    /*top: 680px;
+    left: 830px;*/
+
+}
+.paused {
+    border: 5px solid green;
+}
+.show {
+    position: absolute;
+    top: 380px;
+    left: 790px;
+}
+#explain {
+    position: absolute;
+    top: 1px;
+    left: 120px;
+    text-align: left;
+}
+.hide {
+    display: none;
+
+}
+#content {
+	height: 820px;
+    font-family: "Verdana";
+    text-align: center;
+    font-size: 26px;
+    color: #ffffff;	
+    position: relative;
+    overflow: hidden;
+}
+p {
+    position: absolute;
+    top: -4px;
+    left: 900px;
+     
+}
+.bg{
+    position: absolute;
+    left: 0;
+    right: -550px;
+    top: 0;
+    bottom: 0;
+	background: url(image/stars2.png) 0% 0% repeat;
+    z-index: -1;
+    
+    -webkit-animation-name: MOVE-BG;
+	-webkit-animation-duration: 60s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+#board {
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+}
